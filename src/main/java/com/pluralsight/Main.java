@@ -36,5 +36,15 @@ public class Main {
         carol.useGuestPass();
         frank.useGuestPass();
 
+
+        //Step 5 check run
+        FamilyMembership grace = new FamilyMembership("Grace Lee", 12, new BigDecimal("30.00"), 3);
+        FamilyMembership emma = new FamilyMembership("Emma Wilson", 6, new BigDecimal("30.00"), 1);
+
+        System.out.printf("%s, %d months, $%.2f per month%n",
+                grace.getMemberName(), grace.getMonths(), grace.getMonthlyPrice());
+        System.out.printf("%s, %d months, $%.2f per month%n",
+                emma.getMemberName(), emma.getMonths(), emma.getMonthlyPrice());
+
     }
 }
