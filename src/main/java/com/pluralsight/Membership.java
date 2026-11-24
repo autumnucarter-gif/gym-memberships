@@ -39,5 +39,13 @@ public class Membership {
     public BigDecimal getMonthlyPrice() {
         return baseRate;
     }
+    public BigDecimal getSignUpFee() {
+        return new BigDecimal("49.00");
+    }
+    public BigDecimal getContractTotal() {
+        return getMonthlyPrice()
+                .multiply(BigDecimal.valueOf(months))
+                .add(getSignUpFee());
+    }
 }
 
