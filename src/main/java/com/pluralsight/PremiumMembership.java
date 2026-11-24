@@ -28,4 +28,11 @@ public class PremiumMembership extends Membership {
         }
     }
 
+    @Override
+    public BigDecimal getSignUpFee() {
+        if (getMonths() >= 12) {
+            return new BigDecimal("0.00");
+        }
+        return super.getSignUpFee();
+    }
 }
